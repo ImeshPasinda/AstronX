@@ -1,0 +1,24 @@
+export const NAVIGATE_TO_INVALID_ROUTES = '*';
+export const NAVIGATE_TO_HOME = '/';
+export const NAVIGATE_TO_LOGIN = '/login';
+export const NAVIGATE_TO_REGISTER = '/register';
+export const NAVIGATE_TO_APOD = '/apod'
+export const NAVIGATE_TO_EMRI = '/emri'
+export const NAVIGATE_TO_TES = '/tes'
+export const NAVIGATE_TO_PROFILE = '/profile';
+export const NAVIGATE_TO_ABOUT = '/about';
+export const NAVIGATE_TO_HELP = '/help';
+export const NAVIGATE_TO_FAQ = '/faq';
+export const NAVIGATE_TO_BLOG = '/blog';
+export const NAVIGATE_TO_FORUM = '/forum';
+export const NAVIGATE_TO_FEEDBACK = '/feedback';
+export const NAVIGATE_TO_EVENTS = '/events';
+export const NAVIGATE_TO_CONTACTS = '/contacts';
+export const NAVIGATE_TO_PRIVACY = '/privacy';
+export const NAVIGATE_TO_TERMS = '/terms';
+export const NAVIGATE_TO_ASTRONOMY_PHOTOS = '/astronomy-photos';
+export const NAVIGATE_TO_ASTRONOMY_GUIDES = '/astronomy-guides';
+export const NAVIGATE_TO_SPACE_EXPLORERS = '/space-explorers';
+export const NAVIGATE_TO_TELESCOPE_REVIEWS = '/telescope-reviews';
+export const NAVIGATE_TO_PLANETARY_REPORTS = '/planetary-reports';
+
