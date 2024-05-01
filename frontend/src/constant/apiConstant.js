@@ -1,10 +1,10 @@
 import { DATE, DIM, LATITUDE, LONGITUDE } from "./commonConstant";
 
 //Frontend Url
-export const origin = 'http://localhost:3000';
+export const origin = 'https://astronx.netlify.app';
 
 //baseUrl's
-export const baseUrl_auth = 'http://localhost:5000';
+export const baseUrl_auth = 'https://astronx.onrender.com';
 
 //POST API's
 export const API_POST_LOGIN = '/api/auth/login';
