@@ -13,7 +13,7 @@ export default function useUserAuthInfo() {
           const userData = JSON.parse(decryptedUData);
           setUserDetails(userData);
         } else {
-          console.error('No user data found in local storage.');
+          //console.error('No user data found in local storage.');
         }
       } catch (error) {
         console.error('Error decrypting or parsing user data:', error);
