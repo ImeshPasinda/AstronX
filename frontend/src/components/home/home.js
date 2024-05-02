@@ -12,7 +12,7 @@ export default function Home() {
         <div className='home-container'>
           <div className='content'>
             <div className='text'>
-              <h1 style={{ fontSize: '75px' }}>NASA Explorer Hub</h1>
+              <h1 style={{ fontSize: '75px', fontWeight: 'bold' }}>NASA Explorer Hub</h1>
               <p>Unveiling the Wonders of the Universe</p>
               <div className="buttons">
                 <Button bg='#0056d2' color='white' variant='solid' borderRadius='4px' size='lg' style={{ marginRight: '10px', marginTop: '10px' }}>
@@ -52,7 +52,7 @@ export default function Home() {
                     <h6 style={{ color: 'gray', fontWeight: 400, fontSize: 15, marginLeft: '10px' }}>NASA Open API's</h6>
                   </div>
                   <Heading size='md'>Astronomy picture of the day</Heading>
-                  <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis">
+                  <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis" style={{ color: 'gray' }}>
                     {APOD_DESCRIPTION}
                   </Text>
                 </Stack>
@@ -99,7 +99,7 @@ export default function Home() {
                     <h6 style={{ color: 'gray', fontWeight: 400, fontSize: 15, marginLeft: '10px' }}>NASA Open API's</h6>
                   </div>
                   <Heading size='md'>Explore Mars with Rover Images</Heading>
-                  <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis">
+                  <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis" style={{ color: 'gray' }}>
                     {EMRI_DESCRIPTION}
                   </Text>
                 </Stack>
@@ -146,7 +146,7 @@ export default function Home() {
                     <h6 style={{ color: 'gray', fontWeight: 400, fontSize: 15, marginLeft: '10px' }}>NASA Open API's</h6>
                   </div>
                   <Heading size='md'>Track Earth from Space with Satellite Imagery</Heading>
-                  <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis">
+                  <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis" style={{ color: 'gray' }}>
                     {TES_DESCRIPTION}
                   </Text>
                 </Stack>
