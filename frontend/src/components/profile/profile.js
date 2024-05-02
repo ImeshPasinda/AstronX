@@ -97,7 +97,7 @@ export default function Profile() {
                         <h6 style={{ color: 'gray', fontWeight: 400, fontSize: 15, marginLeft: '10px' }}>NASA Open API's</h6>
                       </div>
                       <Heading size='md'>Astronomy picture of the day</Heading>
-                      <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis">
+                      <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis" style={{ color: 'gray' }}>
                         {APOD_DESCRIPTION}
                       </Text>
                     </Stack>
@@ -147,7 +147,7 @@ export default function Profile() {
                         <h6 style={{ color: 'gray', fontWeight: 400, fontSize: 15, marginLeft: '10px' }}>NASA Open API's</h6>
                       </div>
                       <Heading size='md'>Explore Mars with Rover Images</Heading>
-                      <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis">
+                      <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis" style={{ color: 'gray' }}>
                         {EMRI_DESCRIPTION}
                       </Text>
                     </Stack>
@@ -197,7 +197,7 @@ export default function Profile() {
                         <h6 style={{ color: 'gray', fontWeight: 400, fontSize: 15, marginLeft: '10px' }}>NASA Open API's</h6>
                       </div>
                       <Heading size='md'>Track Earth from Space with Satellite Imagery</Heading>
-                      <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis">
+                      <Text noOfLines={3} overflow="hidden" textOverflow="ellipsis" style={{ color: 'gray' }}>
                         {TES_DESCRIPTION}
                       </Text>
                     </Stack>
