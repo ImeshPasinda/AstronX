@@ -1,22 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import Cookies from 'js-cookie';
 import { Alert, AlertIcon, Button, Spinner, FormControl, Input, FormErrorMessage, FormLabel } from '@chakra-ui/react';
 import { baseUrl_auth, API_POST_REGISTER } from '../../constant/apiConstant';
 import { NAVIGATE_TO_LOGIN } from '../../constant/routeConstant';
-import { redirectAfterLogin } from '../../utils/utility';
-import useUserAuthInfo from './useUserAuthInfo';
 import { EMAIL_PATTERN } from '../../constant/commonConstant';
 
 export default function Register() {
-  const userDetails = useUserAuthInfo();
-  const authToken = Cookies.get('authToken');
-  const isLoggedIn = authToken && authToken !== 'undefined';
-
-  // Check if the user is already logged in and redirect accordingly
-  useEffect(() => {
-    redirectAfterLogin(isLoggedIn, userDetails);
-  }, [isLoggedIn, userDetails]);
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');

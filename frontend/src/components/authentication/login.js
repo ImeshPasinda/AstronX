@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { baseUrl_auth, API_POST_LOGIN } from '../../constant/apiConstant';
 import Cookies from 'js-cookie';
 import CryptoJS from "crypto-js";
 import { Alert, AlertIcon, Button, Spinner, FormControl, Input, FormErrorMessage, FormLabel } from '@chakra-ui/react';
-import { decodeAuthToken, isUserLoggedIn, redirectAfterLogin } from '../../utils/utility';
+import { decodeAuthToken } from '../../utils/utility';
 import { NAVIGATE_TO_HOME, NAVIGATE_TO_INVALID_ROUTES, NAVIGATE_TO_REGISTER } from '../../constant/routeConstant';
 import { EMAIL_PATTERN } from '../../constant/commonConstant';
 
 export default function Login() {
-
-  useEffect(() => {
-    const loggedIn = isUserLoggedIn();
-    redirectAfterLogin(loggedIn);
-  }, []);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
