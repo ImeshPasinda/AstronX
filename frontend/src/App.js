@@ -7,7 +7,7 @@ import Home from './components/home/home';
 import Footer from './components/footer/footer';
 import Login from './components/authentication/login';
 import Register from './components/authentication/register';
-import { NAVIGATE_TO_APOD, NAVIGATE_TO_EMRI, NAVIGATE_TO_INVALID_ROUTES, NAVIGATE_TO_LOGIN, NAVIGATE_TO_PROFILE, NAVIGATE_TO_REGISTER, NAVIGATE_TO_TES } from "./constant/routeConstant.js";
+import { NAVIGATE_TO_APOD, NAVIGATE_TO_EMRI, NAVIGATE_TO_HOME, NAVIGATE_TO_INVALID_ROUTES, NAVIGATE_TO_LOGIN, NAVIGATE_TO_PROFILE, NAVIGATE_TO_REGISTER, NAVIGATE_TO_TES } from "./constant/routeConstant.js";
 import Error from "./components/404/error";
 import Profile from "./components/profile/profile";
 import { isUserLoggedIn } from './utils/utility.js';
@@ -30,9 +30,15 @@ export default function App() {
       <Routes>
 
         {/* Open Routes */}
-        <Route path='/' element={<Home />} />
-        <Route path={NAVIGATE_TO_LOGIN} element={<Login />} />
-        <Route path={NAVIGATE_TO_REGISTER} element={<Register />} />
+        <Route path={NAVIGATE_TO_HOME} element={<Home />} />
+        <Route
+          path={NAVIGATE_TO_LOGIN}
+          element={!isLoggedIn ? <Login /> : <Home />}
+        />
+        <Route
+          path={NAVIGATE_TO_REGISTER}
+          element={!isLoggedIn ? <Register /> : <Home />}
+        />
         <Route path={NAVIGATE_TO_APOD} element={<ApodViewer />} />
         <Route path={NAVIGATE_TO_EMRI} element={<MarsRoverExplorer />} />
         <Route path={NAVIGATE_TO_TES} element={<EarthObservationTracker />} />
