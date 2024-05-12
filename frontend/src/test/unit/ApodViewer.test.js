@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Login from '../components/authentication/login';
+import ApodViewer from '../../components/page/apodViewer';
 
-describe('Login component', () => {
+describe('ApodViewer component', () => {
   it('renders without crashing', () => {
     <BrowserRouter>
-      render(<Login />);
+      render(<ApodViewer />);
     </BrowserRouter>
   });
 });
