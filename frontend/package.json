@@ -51,7 +51,10 @@
     "unit-test-register": "jest Register.test.js",
     "unit-test-apodviewer": "jest ApodViewer.test.js",
     "unit-test-marsroverexplorer": "jest MarsRoverExplorer.test.js",
-    "unit-test-earthobservationtracker": "jest EarthObservationTracker.test.js"
+    "unit-test-earthobservationtracker": "jest EarthObservationTracker.test.js",
+
+    "integration-test-login": "jest Login-intergration.test.js",
+    "integration-test-register": "jest Register-intergration.test.js"
   },
   "eslintConfig": {
     "extends": [
