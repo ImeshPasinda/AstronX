@@ -8,9 +8,6 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@reduxjs/toolkit": "^1.9.5",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.4",
@@ -23,7 +20,22 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "babel-jest": "^29.7.0",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^15.0.5",
+    "@testing-library/user-event": "^14.5.2"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom",
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest",
+      "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/src/jest-transform-stub.js"
+    }
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
@@ -33,7 +45,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    
+    "unit-test-login": "jest Login.test.js",
+    "unit-test-register": "jest Register.test.js",
+    "unit-test-apodviewer": "jest ApodViewer.test.js",
+    "unit-test-marsroverexplorer": "jest MarsRoverExplorer.test.js",
+    "unit-test-earthobservationtracker": "jest EarthObservationTracker.test.js",
+
+    "integration-test-login": "jest Login-intergration.test.js",
+    "integration-test-register": "jest Register-intergration.test.js"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +75,6 @@
     ]
   },
   "devDependencies": {
-    "jest": "^27.5.1"
+    "jest-transform-stub": "^2.0.0"
   }
 }
