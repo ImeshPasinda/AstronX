@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import ApodViewer from '../components/page/apodViewer';
+import Regsiter from '../../components/authentication/register';
 
-describe('ApodViewer component', () => {
+describe('Register component', () => {
   it('renders without crashing', () => {
     <BrowserRouter>
-      render(<ApodViewer />);
+      render(<Regsiter />);
     </BrowserRouter>
   });
 });
