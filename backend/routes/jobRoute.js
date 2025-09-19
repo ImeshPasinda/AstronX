@@ -1,9 +1,8 @@
-import express from "express";
-import { getJobs } from "../controller/jobController";
+const express = require("express");
+const { getJobs } = require("../controller/jobController");
 
 const router = express.Router();
 
-// GET /api/temp/jobs
 router.get("/jobs", getJobs);
 
-export default router;
+module.exports = router;
