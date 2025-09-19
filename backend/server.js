@@ -33,8 +33,11 @@ db.once('open', () => {
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
-const jobRoutes = require('./routes/jobRoute');
-app.use('/api/temp', jobRoutes);
+const jobDevRoutes = require('./routes/jobDevRoute');
+app.use('/api/ortom8/dev', jobDevRoutes);
+
+const jobPreProdRoutes = require('./routes/jobPreProdRoute');
+app.use('/api/ortom8/preprod', jobPreProdRoutes);
 
 // Start server
 app.listen(PORT, () => {
