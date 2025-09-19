@@ -14,7 +14,7 @@ const getJobs = async (req, res) => {
 
     const response = await axios.get(CONTROL_M_API, {
       headers: {
-        "x-api-key": "b25QcmVtOmI4NzVjMjIyLTM0MjItNDgwOC05MDc2LWM4Y2NiMzAwOGE4ZA==",
+        "x-api-key": "b25QcmVtOjNkMGY3YjdiLThkMjMtNDVkMy1iZTM1LTg5ZDllZDdiZTU1MA==",
         "accept": "application/json"
       },
       params
