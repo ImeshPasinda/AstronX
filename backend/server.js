@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: ['https://astronx.netlify.app', 'http://localhost:3000'],
   credentials: true,
 }));
 
