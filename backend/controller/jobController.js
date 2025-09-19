@@ -1,8 +1,8 @@
-import axios from "axios";
+const axios = require("axios");
 
 const CONTROL_M_API = "https://pisces.ortom8.com:8443/automation-api/run/jobs/status";
 
-export const getJobs = async (req, res) => {
+const getJobs = async (req, res) => {
   try {
     const { limit = 100, orderDateFrom, orderDateTo } = req.query;
 
@@ -28,3 +28,5 @@ export const getJobs = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+module.exports = { getJobs };
