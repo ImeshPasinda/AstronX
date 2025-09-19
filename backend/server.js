@@ -33,6 +33,9 @@ db.once('open', () => {
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
+const jobRoutes = require('./routes/jobRoute');
+app.use('/api/temp', jobRoutes);
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

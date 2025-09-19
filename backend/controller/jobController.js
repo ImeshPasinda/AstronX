@@ -1,0 +1,30 @@
+import axios from "axios";
+
+const CONTROL_M_API = "https://pisces.ortom8.com:8443/automation-api/run/jobs/status";
+
+export const getJobs = async (req, res) => {
+  try {
+    const { limit = 100, orderDateFrom, orderDateTo } = req.query;
+
+    const params = {
+      limit,
+      ...(orderDateFrom && { orderDateFrom }),
+      ...(orderDateTo && { orderDateTo })
+    };
+
+    const response = await axios.get(CONTROL_M_API, {
+      headers: {
+        "x-api-key": "b25QcmVtOjdhZGRiNzFhLTJiM2MtNDA1NS1iNzBhLTA0NzdlNjg3YTdjNw==",
+        "accept": "application/json"
+      },
+      params
+    });
+
+    console.log("[TempJobController] Response Status:", response.status);
+    res.json(response.data);
+
+  } catch (error) {
+    console.error("[TempJobController] Error:", error.message);
+    res.status(500).json({ error: error.message });
+  }
+};
