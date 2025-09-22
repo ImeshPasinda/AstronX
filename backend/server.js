@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8086;
 
 // Middleware
 app.use(bodyParser.json());
@@ -32,12 +32,6 @@ db.once('open', () => {
 // Routes
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
-
-const jobDevRoutes = require('./routes/jobDevRoute');
-app.use('/api/ortom8/dev', jobDevRoutes);
-
-const jobPreProdRoutes = require('./routes/jobPreProdRoute');
-app.use('/api/ortom8/preprod', jobPreProdRoutes);
 
 // Start server
 app.listen(PORT, () => {
