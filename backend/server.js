@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8086;
 
 // Middleware
 app.use(bodyParser.json());
@@ -32,9 +32,6 @@ db.once('open', () => {
 // Routes
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
-
-const jobRoutes = require('./routes/jobRoute');
-app.use('/api/temp', jobRoutes);
 
 // Start server
 app.listen(PORT, () => {
